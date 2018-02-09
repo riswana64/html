@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online course</title>
+<h1><center><u>Registeration form</u></center></h1>
+<br>
+<br>
+<script src="angular.min.js">
+</script>
+<script
+angular.module("mod",[]).controller("con1",function($scope){
+$scope.Fname="mani";
+$scope.Lname="welcome";
+});</script>
+</head>
+<body ng-app="mod">
+<center>
+<h3>
+<div ng-controller="con1">
+<p>Firstname : <input type="text" ng-model="Fname" placeholder="Enter name here"></p>
+<br>
+<p>Lastname : <input type="text" ng-model="Lname" placeholder="Enter name here"></p>
+<br>
+Fullname:{{Fname + " " + Lname}}
+</div>
+Gender:
+<input type="radio" name="gender" value="male">male
+<input type="radio" name="gender" value="female">female
+<input type="radio" name="gender" value="other">other<br>
+<br>
+Address:
+<textarea rows="3" cols="30" name="address">
+</textarea>
+<br>
+<br>
+Mobile number:
+<input type="number" name="number">
+<br>
+<br>
+Email:
+<input type="text" name="email"/>
+<br>
+<br>
+Qualification:
+<select>
+<option value="b.e">B.E</option>
+<option value="m.e">M.E</option>
+<option value="m.tech">M.Tech</option>
+<option value="b.tech">B.Tech</option>
+<option value="other">others</option>
+</select><br>
+<br>
+Nationality:
+<input type="text" name="">
+<br>
+<br>
+<input type="submit" value="submit" ng-click="getvalues();return false;"/>
+
+</h3>
+<br>
+<br>
+</form>
+</center>
+</body>
+</html>

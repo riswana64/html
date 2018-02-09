@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<script language="javascript">
+function showResult(){
+alert("hi");
+
+
+var checkedValue = []; 
+var inputElements = document.getElementsByClassName('chkbox');
+
+for(var i=0; inputElements[i]; ++i){
+      if(inputElements[i].checked){
+           checkedValue.push(inputElements[i].value);
+	
+      }
+}
+
+document.getElementById('display').innerHTML="firstname:" + document.form1.firstname.value + "address" + document.form1.message.value +"gender" + document.form1.gender.value +"department" + checkedValue + "select course"+document.form1.course.value + "select country"+document.form1.country.value;
+
+}
+
+</script>
+<body>
+
+<form name="form1">
+
+
+<p id="display"></p>
+<center><b><u>REGISTRATION FORM</u></b></center>
+<br><br>
+  First name:
+  <input type="text" name="firstname">
+  <br>
+  address:
+<textarea name="message" rows="3" cols="15"></textarea><br><br>
+gender:
+<input type="radio" name="gender" value="male" checked> Male
+  <input type="radio" name="gender" value="female"> Female
+  <input type="radio" name="gender" value="other"> Other  
+ <br>
+department:
+<input type="checkbox" class="chkbox" name="department" value="cse">cse
+
+<input type="checkbox" class="chkbox" name="department" value="it">it 
+
+<input type="checkbox" class="chkbox" name="department" value="ece">ece 
+<input type="checkbox" class="chkbox" name="department" value="mech">mech 
+<br><br>
+ 
+
+select course:<select name="course">
+    <option value="ap">JAVA</option>
+    <option value="ms">C++</option>
+    <option value="bd">.NET</option>
+    </select>
+<br><br><br><br>
+
+select country:<select name="country" multiple>
+    <option value="ind">INDIA</option>
+    <option value="pak">pak</option>
+    <option value="sri">sri</option>
+    <option value="aus">aus</option>
+    </select>
+<br><br><br>
+
+  <br><br>
+<center> <input type="submit" value="Submit" onclick="showResult(); return false;"></center>
+
+</form>
+<br><br>
+
+
+</body>
+</html>
